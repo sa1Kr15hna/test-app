@@ -13,14 +13,14 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-
-
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  align-items: center;      /* vertical center */
+  justify-content: flex-start; /* move content left */
   min-width: 320px;
   min-height: 100vh;
+  padding-left: 3rem;  
 }
 
 
