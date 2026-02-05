@@ -6,8 +6,15 @@ function App() {
 
   return (
     <>
-      <div></div>
-      <h1>VR</h1>
+      <div className = "profile-card">
+        <div className="info-box">
+          <img src="/test-app/bear.png" alt="" />
+          <div className="info">
+            <h2>Will you be my Valentine?</h2>
+          </div>
+        </div>
+      </div>
+      
     </>
   )
 }
