@@ -5,38 +5,54 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.profile-card img{
+  width: 150px;
+  border: 5px solid pink;
+  border-radius: 10%;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.profile-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 1em;
+  background-color: rgba(148,148,148,0.25);
+  padding: 3rem;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.profile-card .btn-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.btn-box button{
+  padding: 12px 25px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  border: 2px solid transparent
 }
 
-.card {
-  padding: 2em;
+.btn-box .yes{
+  background-color: pink;
+  color: black;
 }
 
-.read-the-docs {
-  color: #888;
+.btn-box .yes:hover{
+  background-color: #F527A9;
+  color: black;
 }
+
+.btn-box .no{
+  background-color: red ;
+  color: black;
+}
+
+
+
+

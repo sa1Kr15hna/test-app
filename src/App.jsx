@@ -2,7 +2,6 @@ import { useState } from 'react'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
@@ -12,6 +11,11 @@ function App() {
           <div className="info">
             <h2>Will you be my Valentine?</h2>
           </div>
+        </div>
+
+        <div className="btn-box">
+          <button className="yes">Yes</button>
+          <button className="no">No</button>
         </div>
       </div>
       
