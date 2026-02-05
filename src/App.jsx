@@ -20,7 +20,7 @@ function App() {
 
     // Clamp so it never goes beyond "viewport - 100" (safety margin)
     x = Math.min(viewportWidth - 300, x);
-    y = Math.min(viewportHeight - 200, y);
+    y = Math.min(viewportHeight - 300, y);
 
     // Set fixed position and move using transform
     noBtn.style.position = 'fixed';

@@ -13,9 +13,8 @@
 
 
 body{
-  background-image: url('/test-app/image.jpeg');
+  background-image: url('/test-app/image2.png');
   background-size: cover;
-
 }
 .profile-card {
   display: flex;
@@ -28,12 +27,16 @@ body{
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
-
+h2{
+  color: black;
+}
 .profile-card .btn-box {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  min-height: 50px; /* Keep the height consistent */
+  width: 100%;
 }
 .btn-box button{
   padding: 12px 25px;
@@ -45,12 +48,12 @@ body{
 }
 
 .btn-box .yes{
-  background-color: pink;
+  background-color: #F011A2;
   color: black;
 }
 
 .btn-box .yes:hover{
-  background-color: #F527A9;
+  background-color: #FFEEF6;
   color: black;
 }
 
@@ -59,6 +62,9 @@ body{
   color: black;
 }
 
-
+.btn-box .no:hover{
+  background-color: #FFEEF6;
+  color: black;
+}
 
 
