@@ -11,9 +11,8 @@
   border-radius: 10%;
 }
 
-
 body{
-  background-image: url('/test-app/image2.png');
+  background-image: url('/test-app/image.png');
   background-size: cover;
 }
 .profile-card {
@@ -22,7 +21,7 @@ body{
   justify-content: center;
   flex-direction: column;
   border-radius: 1em;
-  background-color: rgba(148, 148, 148, 0.16);
+  background-color: rgba(255,255,255,0);
   padding: 3rem;
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.3);

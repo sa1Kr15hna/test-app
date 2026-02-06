@@ -1,54 +1,47 @@
-import { useRef } from 'react';
+import { useState, useRef } from 'react';
 import './App.css';
 
 function App() {
-  const noRef = useRef(null);
-  const moveNoButton = () => {
-    const noBtn = noRef.current;
-    if (!noBtn) return;
+  const noBtnRef = useRef(null);
+  // Initial position (null means it stays in its default flexbox/grid spot)
+  const [position, setPosition] = useState(null);
 
-    const padding = 10; // margin from edges
-    const viewportWidth = window.innerWidth;
-    const viewportHeight = window.innerHeight;
+  const moveButton = () => {
+    if (noBtnRef.current) {
+      const rect = noBtnRef.current.getBoundingClientRect();
+      
+      // 1. Generate random Center coordinates between 200 and 1000
+      const randomCenterX = Math.floor(Math.random() * (1000 - 100 + 1) + 100);
+      const randomCenterY = Math.floor(Math.random() * (600 - 200 + 1) + 40);
 
-    const btnWidth = noBtn.offsetWidth;
-    const btnHeight = noBtn.offsetHeight;
+      // 2. Adjust for top-left position (Center - half of width/height)
+      const newX = randomCenterX - rect.width / 2;
+      const newY = randomCenterY - rect.height / 2;
 
-    // Initial random position
-    let x = Math.random() * (viewportWidth - btnWidth - 2 * padding) + padding;
-    let y = Math.random() * (viewportHeight - btnHeight - 2 * padding) + padding;
-
-    // Clamp so it never goes beyond "viewport - 100" (safety margin)
-    x = Math.min(viewportWidth - 300, x);
-    y = Math.min(viewportHeight - 300, y);
-
-    // Set fixed position and move using transform
-    noBtn.style.position = 'fixed';
-    noBtn.style.left = '0px';  
-    noBtn.style.top = '0px';
-    noBtn.style.transform = `translate(${x}px, ${y}px)`;
-
-    console.log('Viewport:', viewportWidth, viewportHeight, 'X:', x, 'Y:', y, 'Button:', btnWidth, btnHeight);
+      setPosition({ x: newX, y: newY });
+      
+      console.log(`New Center: X:${randomCenterX}, Y:${randomCenterY}`);
+    }
   };
 
-
-
+  const btnStyle = position 
+    ? { position: 'fixed', left: `${position.x}px`, top: `${position.y}px`, zIndex: 1000 } 
+    : {};
 
   return (
     <div className="profile-card">
       <div className="info-box">
-        <img src="/test-app/bear.png" alt="" />
-        <div className="info Q">
-          <h2>Will you be my Valentine?</h2>
-        </div>
+        <img src="/test-app/bear.png" alt="bear" />
+        <h2>Will you be my Valentine?</h2>
       </div>
 
       <div className="btn-box">
-        <button className="yes">Yes</button>
-        <button
-          className="no"
-          ref={noRef}
-          onClick={moveNoButton} // Move button on click now
+        <button className="yes" onClick={() => alert("❤️")}>Yes</button>
+        <button 
+          ref={noBtnRef}
+          className="no" 
+          style={btnStyle}
+          onMouseEnter={moveButton} // Moves when mouse enters
         >
           No
         </button>
