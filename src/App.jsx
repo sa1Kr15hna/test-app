@@ -41,7 +41,7 @@ function App() {
           ref={noBtnRef}
           className="no" 
           style={btnStyle}
-          onMouseEnter={moveButton} // Moves when mouse enters
+          onClick={moveButton} // Moves when mouse enters
         >
           No
         </button>
