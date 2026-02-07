@@ -38,7 +38,7 @@ function App() {
   return (
     <div className="profile-card">
       <div className="info-box">
-        <img src="/test-app/bear.png" alt="bear" />
+        
         <h2>Will you be my Valentine?</h2>
       </div>
 
