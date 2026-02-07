@@ -43,7 +43,7 @@ function App() {
       </div>
 
       <div className="btn-box">
-        <button className="yes" onClick={() => navigate('/test-app/yes')}>Yes</button>
+        <button className="yes" onClick={() => navigate('/yes')}>Yes</button>
         <button 
           ref={noBtnRef}
           className="no" 
