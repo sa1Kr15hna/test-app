@@ -1,24 +1,32 @@
 import { useState, useRef } from 'react';
 import './App.css';
+import { useNavigate } from 'react-router-dom';
 
 function App() {
+  const navigate = useNavigate();
   const noBtnRef = useRef(null);
-  // Initial position (null means it stays in its default flexbox/grid spot)
   const [position, setPosition] = useState(null);
+  
+  // 1. Create state for the button text
+  const [noButtonText, setNoButtonText] = useState("No");
 
   const moveButton = () => {
     if (noBtnRef.current) {
       const rect = noBtnRef.current.getBoundingClientRect();
       
-      // 1. Generate random Center coordinates between 200 and 1000
       const randomCenterX = Math.floor(Math.random() * (1000 - 100 + 1) + 100);
       const randomCenterY = Math.floor(Math.random() * (600 - 200 + 1) + 40);
 
-      // 2. Adjust for top-left position (Center - half of width/height)
       const newX = randomCenterX - rect.width / 2;
       const newY = randomCenterY - rect.height / 2;
 
       setPosition({ x: newX, y: newY });
+
+      // 2. Update the text here
+      // You can use a fixed string or a random array of "rejections"
+      const phrases = ["Are you sure?", "Really?", "Think again!", "Rude!", "Nice try", "Nope", "Try harder!", "Not happening!", "F*ck You!!"];
+      const randomPhrase = phrases[Math.floor(Math.random() * phrases.length)];
+      setNoButtonText(randomPhrase);
       
       console.log(`New Center: X:${randomCenterX}, Y:${randomCenterY}`);
     }
@@ -36,14 +44,15 @@ function App() {
       </div>
 
       <div className="btn-box">
-        <button className="yes" onClick={() => alert("❤️")}>Yes</button>
+        <button className="yes" onClick={() => navigate('/test-app/yes')}>Yes</button>
         <button 
           ref={noBtnRef}
           className="no" 
           style={btnStyle}
-          onClick={moveButton} // Moves when mouse enters
+          onClick={moveButton} 
         >
-          No
+          {/* 3. Render the dynamic text instead of the hardcoded "No" */}
+          {noButtonText}
         </button>
       </div>
     </div>
