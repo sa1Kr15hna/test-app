@@ -21,15 +21,20 @@ body{
   justify-content: center;
   flex-direction: column;
   border-radius: 1em;
-  background-color: rgba(28, 9, 9, 0.374);
+  background: rgba(255, 255, 255, 0.12);
   padding: 3rem;
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(6px);
   border: 1px solid rgba(3, 0, 0, 0);
 }
+h1{
+  font-family: 'Copperplate Gothic Light', cursive;
+  color:#000000;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3); /* bold; use 600 for semi-bold, 800–900 for extra bold */
+}
 h2{
-  font-family: 'Pinyon Script', cursive;
-  color:#ffdfba;
-  font-weight: 900; /* bold; use 600 for semi-bold, 800–900 for extra bold */
+  font-family: 'Copperplate Gothic Light', cursive;
+  color:#000000;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3); /* bold; use 600 for semi-bold, 800–900 for extra bold */
 }
 .profile-card .btn-box {
   display: flex;
@@ -40,8 +45,8 @@ h2{
   width: 100%;
 }
 .btn-box button{
-  font-family: 'Pinyon Script', cursive;
-  font-weight: 700; /* bold */
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  font-family: 'Copperplate Gothic Light', cursive;
   padding: 12px 25px;
   font-size: 16px;
   border-radius: 5px;
@@ -52,6 +57,7 @@ h2{
 }
 
 .btn-box .yes{
+
   background-color: 	#baffc9;
   color: black;
 }

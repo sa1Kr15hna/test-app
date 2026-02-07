@@ -14,7 +14,7 @@ function App() {
       const rect = noBtnRef.current.getBoundingClientRect();
       
       const randomCenterX = Math.floor(Math.random() * (1000 - 100 + 1) + 100);
-      const randomCenterY = Math.floor(Math.random() * (600 - 200 + 1) + 40);
+      const randomCenterY = Math.floor(Math.random() * (600 - 250 + 1) + 40);
 
       const newX = randomCenterX - rect.width / 2;
       const newY = randomCenterY - rect.height / 2;
@@ -38,7 +38,7 @@ function App() {
   return (
     <div className="profile-card">
       <div className="info-box">
-        
+        <h1>Keerthi</h1>
         <h2>Will you be my Valentine?</h2>
       </div>
 

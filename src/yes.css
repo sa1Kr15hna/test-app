@@ -18,6 +18,30 @@
   background-attachment: fixed;
 }
 
+.poem {
+  max-width: 28rem;
+  text-align: center;
+  padding: 2rem 2.5rem;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 1rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(4px);
+  transform: translate(-330px, -50px);
+}
+
+.poem p {
+  font-family: 'Copperplate Gothic Light', cursive;
+  margin: 0.4em 0;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.yes-page p {
+  margin: 0.25em 0;  /* override default p margins that cause large gaps */
+}
+
 .yes-page h1 {
   color: #c71585;
   font-size: 3rem;
