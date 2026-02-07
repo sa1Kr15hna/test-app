@@ -38,7 +38,7 @@ function App() {
   return (
     <div className="profile-card">
       <div className="info-box">
-        <h1>Keerthi</h1>
+        <h2>Keerthi</h2>
         <h2>Will you be my Valentine?</h2>
       </div>
 
