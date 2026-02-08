@@ -15,7 +15,7 @@ function App() {
     if (noBtnRef.current) {
       const rect = noBtnRef.current.getBoundingClientRect();
       
-      const randomCenterX = Math.floor(Math.random() * (1000 - 100 + 1) + 100);
+      const randomCenterX = Math.floor(Math.random() * (1000 - 200 + 1) + 100);
       const randomCenterY = Math.floor(Math.random() * (600 - 250 + 1) + 40);
 
       const newX = randomCenterX - rect.width / 2;
