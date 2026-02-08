@@ -1,8 +1,9 @@
 import './yes.css';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 function Yes() {
   const location = useLocation();
+  const navigate = useNavigate();
   const noClickCount = location.state?.noClickCount ?? 0;
 
   return (
@@ -15,6 +16,7 @@ function Yes() {
               <p>Really??? You clicked NO {noClickCount} time{noClickCount !== 1 ? 's' : ''} </p>
               <p>Shame on YOU!!! Go back and Try again..</p>
               <img src="/test-app/dis.png" alt="" className="yes-camera-img" />
+              <button type="button" className="try-again-btn" onClick={() => navigate('/')}>Try again</button>
             </>
           ) : (
             <>
