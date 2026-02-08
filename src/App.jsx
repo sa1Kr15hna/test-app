@@ -41,6 +41,7 @@ function App() {
     <div className="profile-card">
       <div className="info-box">
         <h2>Keerthi</h2>
+        <img src="/test-app/shy.png" alt="" className="yes-camera-img" />
         <h2>Will you be my Valentine?</h2>
       </div>
 

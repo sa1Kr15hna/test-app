@@ -5,11 +5,7 @@
   text-align: center;
 }
 
-.profile-card img{
-  width: 150px;
-  border: 1px solid rgba(46, 46, 46, 0);
-  border-radius: 10%;
-}
+
 
 body{
   background-image: url('/test-app/image.png');
@@ -25,6 +21,13 @@ body{
   padding: 3rem;
   backdrop-filter: blur(6px);
   border: 1px solid rgba(3, 0, 0, 0);
+}
+.yes-camera-img {
+  width: 20px;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto 0.75rem auto;
+  display: block;
 }
 h1{
   font-family: 'Cinzel', 'Copperplate Gothic Light', Georgia, serif;

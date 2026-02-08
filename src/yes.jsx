@@ -11,12 +11,15 @@ function Yes() {
           {noClickCount > 0 ? (
             <>
               <p>Gotcha Bitch!!</p>
+              <img src="/test-app/camera.png" alt="" className="yes-camera-img" />
               <p>Really??? You clicked NO {noClickCount} time{noClickCount !== 1 ? 's' : ''} </p>
-              <p>Shame on YOU!!!</p>
+              <p>Shame on YOU!!! Go back and Try again..</p>
+              <img src="/test-app/dis.png" alt="" className="yes-camera-img" />
             </>
           ) : (
             <>
               <p>Really???</p>
+              <img src="/test-app/love.png" alt="" className="yes-camera-img" />
               <p>I want to be your Valentine too....</p>
             </>
           )}
