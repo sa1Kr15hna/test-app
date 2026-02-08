@@ -26,7 +26,7 @@
   border-radius: 1rem;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(4px);
-  transform: translate(-330px, -50px);
+  transform: translate(-310px, -50px);
 }
 
 .poem p {
