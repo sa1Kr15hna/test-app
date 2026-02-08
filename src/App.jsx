@@ -8,8 +8,10 @@ function App() {
   
   // 1. Create state for the button text
   const [noButtonText, setNoButtonText] = useState("No");
+  const [noClickCount, setNoClickCount] = useState(0);
 
   const moveButton = () => {
+    setNoClickCount((c) => c + 1);
     if (noBtnRef.current) {
       const rect = noBtnRef.current.getBoundingClientRect();
       
@@ -43,7 +45,7 @@ function App() {
       </div>
 
       <div className="btn-box">
-        <button className="yes" onClick={() => navigate('/yes')}>Yes</button>
+        <button className="yes" onClick={() => navigate('/yes', { state: { noClickCount } })}>Yes</button>
         <button 
           ref={noBtnRef}
           className="no" 
